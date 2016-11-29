@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Peter Test",
+    "mail": "p.test@test.com",
+    "authorizations": [
+      "Test 1",
+      "Test 2",
+      "Test 3"
+    ]
+  },
+  {
+    "name": "John Test",
+    "mail": "j.test@test.com",
+    "authorizations": [
+      "Test 1"
+    ]
+  },
+  {
+    "name": "Paula Test",
+    "mail": "pa.test@test.com",
+    "authorizations": [
+      "Test 2",
+      "Test 3"
+    ]
+  }
+]

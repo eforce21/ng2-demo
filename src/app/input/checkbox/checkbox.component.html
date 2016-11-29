@@ -1,0 +1,36 @@
+<p-panel header="Dynamic checkbox examples">
+    <p-dataTable [value]="user">
+        <p-column field="name" header="Name"></p-column>
+        <p-column field="mail" header="Mail"></p-column>
+        <p-column>
+            <template pTemplate type="header">
+                Test Authorization 1
+            </template>
+            <template let-u="rowData" pTemplate type="body">
+                <div class="center">
+                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 1') != -1"/>
+                </div>
+            </template>
+        </p-column>
+        <p-column>
+            <template pTemplate type="header">
+                Test Authorization 2
+            </template>
+            <template let-u="rowData" pTemplate type="body">
+                <div class="center">
+                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 2') != -1"/>
+                </div>
+            </template>
+        </p-column>
+        <p-column>
+            <template pTemplate type="header">
+                Test Authorization 3
+            </template>
+            <template let-u="rowData" pTemplate type="body">
+                <div class="center">
+                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 3') != -1"/>
+                </div>
+            </template>
+        </p-column>
+    </p-dataTable>
+</p-panel>

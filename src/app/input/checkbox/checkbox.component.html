@@ -1,37 +1,86 @@
-<p-panel header="Dynamic checkbox examples">
-    <p-dataTable [value]="users">
-        <p-column field="name" header="Name"></p-column>
-        <p-column field="mail" header="Mail"></p-column>
-        <p-column>
-            <template pTemplate type="header">
-                Test Authorization 1
-            </template>
-            <template let-u="rowData" pTemplate type="body">
-                <div class="center">
-                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 1') != -1" (click)="checkBoxClicked('Test 1', u.name)"/>
-                </div>
-            </template>
-        </p-column>
-        <p-column>
-            <template pTemplate type="header">
-                Test Authorization 2
-            </template>
-            <template let-u="rowData" pTemplate type="body">
-                <div class="center">
-                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 2') != -1" (click)="checkBoxClicked('Test 2', u.name)"/>
-                </div>
-            </template>
-        </p-column>
-        <p-column>
-            <template pTemplate type="header">
-                Test Authorization 3
-            </template>
-            <template let-u="rowData" pTemplate type="body">
-                <div class="center">
-                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 3') != -1" (click)="checkBoxClicked('Test 3', u.name)"/>
-                </div>
-            </template>
-        </p-column>
-    </p-dataTable>
-    <a [routerLink]="['../']">Back</a>
-</p-panel>
+<div class="ui-g">
+    <div class="ui-g-12">
+        <p-panel header="Dynamic checkbox examples using plain checkbox">
+            <p-dataTable [value]="users">
+                <p-column field="name" header="Name"></p-column>
+                <p-column field="mail" header="Mail"></p-column>
+                <p-column>
+                    <template pTemplate type="header">
+                        Test Authorization 1
+                    </template>
+                    <template let-u="rowData" pTemplate type="body">
+                        <div class="center">
+                            <input type="checkbox" [checked]="u.authorizations.indexOf('Test 1') != -1"
+                                   (click)="checkBoxClicked('Test 1', u.name)"/>
+                        </div>
+                    </template>
+                </p-column>
+                <p-column>
+                    <template pTemplate type="header">
+                        Test Authorization 2
+                    </template>
+                    <template let-u="rowData" pTemplate type="body">
+                        <div class="center">
+                            <input type="checkbox" [checked]="u.authorizations.indexOf('Test 2') != -1"
+                                   (click)="checkBoxClicked('Test 2', u.name)"/>
+                        </div>
+                    </template>
+                </p-column>
+                <p-column>
+                    <template pTemplate type="header">
+                        Test Authorization 3
+                    </template>
+                    <template let-u="rowData" pTemplate type="body">
+                        <div class="center">
+                            <input type="checkbox" [checked]="u.authorizations.indexOf('Test 3') != -1"
+                                   (click)="checkBoxClicked('Test 3', u.name)"/>
+                        </div>
+                    </template>
+                </p-column>
+            </p-dataTable>
+            <a [routerLink]="['../']">Back</a>
+        </p-panel>
+    </div>
+</div>
+
+<div class="ui-g">
+    <div class="ui-g-12">
+        <p-panel header="Dynamic checkbox examples using PrimeNG checkboxes">
+            <p-dataTable [value]="users">
+                <p-column field="name" header="Name"></p-column>
+                <p-column field="mail" header="Mail"></p-column>
+                <p-column>
+                    <template pTemplate type="header">
+                        Test Authorization 1
+                    </template>
+                    <template let-u="rowData" pTemplate type="body">
+                        <div class="center">
+                            <p-checkbox value="Test 1" [(ngModel)]="u.authorizations" (click)="showAuthorizations(u.authorizations)"></p-checkbox>
+                        </div>
+                    </template>
+                </p-column>
+                <p-column>
+                    <template pTemplate type="header">
+                        Test Authorization 2
+                    </template>
+                    <template let-u="rowData" pTemplate type="body">
+                        <div class="center">
+                            <p-checkbox value="Test 2" [(ngModel)]="u.authorizations" (click)="showAuthorizations(u.authorizations)"></p-checkbox>
+                        </div>
+                    </template>
+                </p-column>
+                <p-column>
+                    <template pTemplate type="header">
+                        Test Authorization 3
+                    </template>
+                    <template let-u="rowData" pTemplate type="body">
+                        <div class="center">
+                            <p-checkbox value="Test 3" [(ngModel)]="u.authorizations" (click)="showAuthorizations(u.authorizations)"></p-checkbox>
+                        </div>
+                    </template>
+                </p-column>
+            </p-dataTable>
+            <a [routerLink]="['../']">Back</a>
+        </p-panel>
+    </div>
+</div>

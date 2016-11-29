@@ -42,4 +42,8 @@ export class CheckboxComponent implements OnInit {
             });
 
     }
+
+    showAuthorizations(auths: string[]) {
+        console.log('Current authorizations: ', auths);
+    }
 }

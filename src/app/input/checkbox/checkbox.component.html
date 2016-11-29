@@ -1,5 +1,5 @@
 <p-panel header="Dynamic checkbox examples">
-    <p-dataTable [value]="user">
+    <p-dataTable [value]="users">
         <p-column field="name" header="Name"></p-column>
         <p-column field="mail" header="Mail"></p-column>
         <p-column>
@@ -8,7 +8,7 @@
             </template>
             <template let-u="rowData" pTemplate type="body">
                 <div class="center">
-                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 1') != -1"/>
+                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 1') != -1" (click)="checkBoxClicked('Test 1', u.name)"/>
                 </div>
             </template>
         </p-column>
@@ -18,7 +18,7 @@
             </template>
             <template let-u="rowData" pTemplate type="body">
                 <div class="center">
-                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 2') != -1"/>
+                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 2') != -1" (click)="checkBoxClicked('Test 2', u.name)"/>
                 </div>
             </template>
         </p-column>
@@ -28,7 +28,7 @@
             </template>
             <template let-u="rowData" pTemplate type="body">
                 <div class="center">
-                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 3') != -1"/>
+                    <input type="checkbox" [checked]="u.authorizations.indexOf('Test 3') != -1" (click)="checkBoxClicked('Test 3', u.name)"/>
                 </div>
             </template>
         </p-column>

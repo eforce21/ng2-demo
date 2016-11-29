@@ -9,7 +9,7 @@ import {User} from "../../shared/user";
 })
 export class CheckboxComponent implements OnInit {
 
-    user: User[];
+    users: User[];
 
     constructor(private _dataService: DataService) {
     }
@@ -17,9 +17,29 @@ export class CheckboxComponent implements OnInit {
     ngOnInit() {
         this._dataService.getUserData()
             .subscribe(
-                user => this.user = user,
+                users => this.users = users,
                 error => console.log(error)
             );
     }
 
+    checkBoxClicked(authorization: string, userName: string) {
+        this.users
+            .filter(user => user.name == userName)
+            .map(targetUser => {
+
+                let currentAuth = targetUser.authorizations;
+                let authIndex = currentAuth.indexOf(authorization);
+                if (authIndex != -1) {
+                    currentAuth.splice(authIndex, 1);
+                    targetUser.authorizations = currentAuth;
+                    console.log('Removed an authorization. New set of authorizations: ', targetUser.authorizations);
+                    return;
+                }
+
+                currentAuth.push(authorization);
+                targetUser.authorizations = currentAuth;
+                console.log('Added an authorization. New set of authorizations: ', targetUser.authorizations);
+            });
+
+    }
 }

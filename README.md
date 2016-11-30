@@ -7,7 +7,7 @@ as a build tool. To start the app run the command `ng serve` on the level of the
  
  **Disclaimer**  
  The code is not production ready. It is kept as simple as possible for the sake of the example. Please feel free to use
-  the examples and fit them to your needs but I will not feel responsible for any damage done to your app due by blindly 
+  the examples and fit them to your needs but I will not feel responsible for any damage done to your app due to blindly 
   copying any examples and using them in your application without reflecting the impact or adding necessary security. 
  
  **Credits**

@@ -7,6 +7,7 @@ import {InputComponent} from "./input.component";
 import {CheckboxComponent} from "./checkbox/checkbox.component";
 import {InputListComponent} from "./input-list/input-list.component";
 import {SharedModule} from "../shared/shared.module";
+import {DropdownComponent} from "./dropdown/dropdown.component";
 
 @NgModule({
     imports: [
@@ -21,7 +22,8 @@ import {SharedModule} from "../shared/shared.module";
     declarations: [
         InputComponent,
         InputListComponent,
-        CheckboxComponent
+        CheckboxComponent,
+        DropdownComponent
     ]
 })
 export class InputModule {

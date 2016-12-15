@@ -3,6 +3,7 @@ import {Routes, RouterModule} from "@angular/router";
 import {InputListComponent} from "./input-list/input-list.component";
 import {InputComponent} from "./input.component";
 import {CheckboxComponent} from "./checkbox/checkbox.component";
+import {DropdownComponent} from "./dropdown/dropdown.component";
 
 const inputRoutes: Routes = [
     {
@@ -21,6 +22,10 @@ const inputRoutes: Routes = [
             {
                 path: 'checkbox',
                 component: CheckboxComponent
+            },
+            {
+                path: 'dropdown',
+                component: DropdownComponent
             }
         ]
     }

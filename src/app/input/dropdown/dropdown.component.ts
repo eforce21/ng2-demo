@@ -36,7 +36,7 @@ export class DropdownComponent implements OnInit {
         });
     }
 
-    onOptionSelect(event: any, index: number, selectedOption: Option) {
+    onOptionSelect(index: number, selectedOption: Option) {
         console.log('Selected rule: ', selectedOption);
         console.log('Column: ', index);
     }

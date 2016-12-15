@@ -1,7 +1,7 @@
 <div class="ui-g">
     <div *ngFor="let container of zNameContainers; let i = index" class="ui-g-6">
         <span>{{container.zName}}</span><br/>
-        <select #option (change)="onOptionSelect($event, i, option.value)">
+        <select #option (change)="onOptionSelect(i, option.value)">
             <option value="" selected disabled>Choose rule...</option>
             <option *ngFor="let o of container.availableOptions" [value]="o | json">{{o.name}}</option>
         </select>
